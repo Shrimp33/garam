@@ -1,10 +1,8 @@
-# Garam, for arrays too big for memory    
+# Garam, for arrays too big for memory.    
 ## A dictionary / list that is stored on the disk for ram intensive operations.
-<br/>
 
 # Construction
 ## ``` def __init__(self, path, mode='binary', save=True): ```  
-<br/>
 
 ## Path  
 ### Prettly self explanatory, where to load and store elements of the garam instance.
@@ -20,7 +18,6 @@
 ```save=True```  
 ### Deletes everything in the path set on construction 
 ``` save=False ```  
-<br/>
 
 # Examples  
 ## Excerpts are from test.py
