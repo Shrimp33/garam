@@ -12,6 +12,7 @@ class PathManager:
         if not os.path.exists(path):
             os.mkdir(path)
     def __setitem__(self, name, value) -> None:
+        name = str(name)
         if self.mode == 'binary':
             with open(os.path.join(self.path, name), 'wb') as f:
                 pickle.dump(value, f)
@@ -19,6 +20,7 @@ class PathManager:
             with open(os.path.join(self.path, name), 'w') as f:
                 f.write(value)
     def __getitem__(self, name):
+        name = str(name)
         # if file exists return sub manager
         subpath = os.path.join(self.path, name)
         if os.path.isfile(subpath):
